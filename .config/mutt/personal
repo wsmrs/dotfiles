@@ -1,0 +1,10 @@
+set realname = "Will Sommers"
+set from = "contact@willsommers.com"
+
+set folder = ~/.mail/personal
+set spoolfile = +INBOX
+set record = +Sent
+set trash = +Trash
+set postponed = +Drafts
+
+macro index S "<shell-escape>mbsync personal<enter>"

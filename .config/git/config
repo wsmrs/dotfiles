@@ -1,0 +1,7 @@
+[user]
+	name = Will Sommers
+	email = contact@willsommers.com
+[init]
+	defaultBranch = main
+[sendemail]
+	sendmailCmd = /usr/bin/msmtp -a personal

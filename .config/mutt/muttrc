@@ -1,0 +1,12 @@
+folder-hook personal "source ~/.config/mutt/personal"
+folder-hook amherst "source ~/.config/mutt/amherst"
+
+source ~/.config/mutt/amherst
+
+set sendmail = "msmtp"
+set use_envelope_from = yes
+
+set wait_key = no
+set sleep_time = 0
+set delete = yes
+unset confirmappend

@@ -1,0 +1,69 @@
+Create Both
+Expunge Both
+CopyArrivalDate yes
+SyncState *
+
+IMAPAccount personal
+TLSType IMAPS
+Host imap.migadu.com
+User contact@willsommers.com
+PassCmd "gpg --batch -q --decrypt ~/.passwords/mail/personal.gpg"
+
+IMAPStore personal-remote
+Account personal
+
+MaildirStore personal-local
+SubFolders Verbatim
+Path ~/.mail/personal/
+Inbox ~/.mail/personal/INBOX
+
+Channel personal
+Far :personal-remote:
+Near :personal-local:
+Patterns *
+
+IMAPAccount amherst
+TLSType IMAPS
+Host imap.gmail.com
+User wsommers28@amherst.edu
+PassCmd "gpg --batch -q --decrypt ~/.passwords/mail/amherst.gpg"
+
+IMAPStore amherst-remote
+Account amherst
+
+MaildirStore amherst-local
+SubFolders Verbatim
+Path ~/.mail/amherst/
+Inbox ~/.mail/amherst/INBOX
+
+Channel amherst-default
+Far :amherst-remote:
+Near :amherst-local:
+Pattern INBOX
+
+Channel amherst-archive
+Far :amherst-remote:"My Archive"
+Near :amherst-local:Archive
+Create Near
+
+Channel amherst-sent
+Far :amherst-remote:"[Gmail]/Sent Mail"
+Near :amherst-local:Sent
+Create Near
+
+Channel amherst-trash
+Far :amherst-remote:"[Gmail]/Trash"
+Near :amherst-local:Trash
+Create Near
+
+Channel amherst-drafts
+Far :amherst-remote:"[Gmail]/Drafts"
+Near :amherst-local:Drafts
+Create Near
+
+Group amherst
+Channel amherst-default
+Channel amherst-archive
+Channel amherst-sent
+Channel amherst-trash
+Channel amherst-drafts

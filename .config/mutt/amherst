@@ -1,0 +1,10 @@
+set realname = "Will Sommers"
+set from = "wsommers28@amherst.edu"
+
+set folder = ~/.mail/amherst
+set spoolfile = +INBOX
+unset record
+set trash = +Trash
+set postponed = +Drafts
+
+macro index S "<shell-escape>mbsync amherst<enter>"

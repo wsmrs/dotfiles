@@ -1,0 +1,2 @@
+#!/bin/sh -e
+tr -dc "[:alnum:][:punct:]" </dev/urandom | fold -w 16 | head -n 1

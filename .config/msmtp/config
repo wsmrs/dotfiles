@@ -1,0 +1,16 @@
+defaults
+tls on
+tls_starttls off
+auth on
+
+account personal
+host smtp.migadu.com
+from contact@willsommers.com
+user contact@willsommers.com
+passwordeval gpg --batch -q --decrypt ~/.passwords/mail/personal.gpg
+
+account amherst
+host smtp.gmail.com
+from wsommers28@amherst.edu
+user wsommers28@amherst.edu
+passwordeval gpg --batch -q --decrypt ~/.passwords/mail/amherst.gpg
