@@ -1,2 +1,2 @@
-set smartindent
+filetype plugin indent on
 set mouse=a
