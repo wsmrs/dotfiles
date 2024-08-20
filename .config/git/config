@@ -4,4 +4,4 @@
 [init]
 	defaultBranch = main
 [sendemail]
-	sendmailCmd = /usr/bin/msmtp -a personal
+	sendmailCmd = msmtp -a personal
