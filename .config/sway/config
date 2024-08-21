@@ -58,8 +58,8 @@ bar {
 	status_command status
 }
 
-bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+bindsym --locked XF86AudioMute exec amixer -q set Master toggle
+bindsym --locked XF86AudioLowerVolume exec amixer -q set Master 5%-
+bindsym --locked XF86AudioRaiseVolume exec amixer -q set Master 5%+
 
 seat * xcursor_theme Adwaita
