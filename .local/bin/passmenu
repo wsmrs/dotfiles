@@ -1,4 +1,4 @@
 #!/bin/sh -e
-name="$(find ~/.passwords/* -prune -name '*.gpg' -type f -exec basename {} .gpg \; | wmenu)"
+name="$(find ~/.passwords/* -prune -name '*.gpg' -type f -exec basename {} .gpg \; | sort | wmenu)"
 [ -z "$name" ] && exit
 gpg --batch -q --decrypt ~/.passwords/"$name".gpg | tr -d "\n" | wtype -
